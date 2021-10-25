@@ -1,0 +1,152 @@
+:root{
+    --color1: #19181A;
+    --color2: #479761;
+    --color3: #cebc81;
+    --color4: #A16E83;
+    --color5: #B19F9E;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--color1);
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}   
+
+.header-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 1rem;
+    background-color: var(--color1);
+    color: var(--color5);
+    
+}
+
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color3);
+    padding: 1px;
+    justify-content: space-around;
+    
+}
+
+.nav-container a{
+    text-decoration: none;
+    color: var(--color1);
+    padding: 1rem;
+}
+
+.nav-container a:hover{
+    background-color: var(--color4);
+    color: var(--color3);
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+section{
+    flex: 70%;
+    background-color: var(--color1);
+    color: var(--color4);
+    padding: 1rem;
+}
+
+footer{
+    padding: 5px;
+    text-align: center;
+    background-color: var(--color3);
+}
+
+.post-container{
+    display: flex;
+    flex-direction: column;
+    border-bottom-style: solid ;
+    border-bottom-color: var(--color2);
+}
+
+.last-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    background-color: var(--color4);
+    color: var(--color1);
+    margin-bottom: 1%;
+}
+
+.btn:hover{
+    color: var(--color3);
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.search-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+}
+
+@media only screen and (max-width: 576px) {
+    .search-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+}
+
+.search-result{
+    justify-self: center;
+    color: var(--color5);
+    border-bottom-style: double ;
+    border-bottom-color: var(--color1);
+}
+
+.notfound{
+    align-self: center;
+}
+
+.delete-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.yn .btn{
+    background-color: #AF0022;
+    color: white;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+}
+.yn .btn:hover{
+    background-color: #D54A65;
+    color: #681B2A;
+    
+}
+
+.nopost{
+    color: var(--color5);
+}
