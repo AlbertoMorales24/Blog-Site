@@ -59,10 +59,6 @@
                     </section>
                 <% } else { %>
                     <section style="display: none;">
-                        <% if(check==0){ %> 
-                            <h3 class="search-result">Results for <%= searchB %>: <%= searchP %></h3>
-                        <% } %> 
-                        <% check=1 %> 
                         <form class="post-container mt-0" method="POST" action="/edit">
                             <h3><%= items[i].title %></h3>
                             <h6>Author: <%= items[i].author %></h6>
