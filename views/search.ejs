@@ -57,7 +57,25 @@
                             </div>
                         </form>
                     </section>
-                <% } %>
+                <% } else { %>
+                    <section style="display: none;">
+                        <% if(check==0){ %> 
+                            <h3 class="search-result">Results for <%= searchB %>: <%= searchP %></h3>
+                        <% } %> 
+                        <% check=1 %> 
+                        <form class="post-container mt-0" method="POST" action="/edit">
+                            <h3><%= items[i].title %></h3>
+                            <h6>Author: <%= items[i].author %></h6>
+                            <p><%- items[i].text.replace(/\r?\n/g, '<br />') %></p>
+                            <div class="last-row">
+                                <p><%= items[i].date %></p>
+                                <input name="index" id="index" class="index" style="display: none;"></input>
+                                <button type="submit" class="btn" name="action" value="edit">Edit</button>
+                                <button type="submit" class="btn" name="action" value="delete">Delete</button>
+                            </div>
+                        </form>
+                    </section>
+                <% } %> 
             <% } %>
             <% if(check==0){ %> 
                 <h2 class="search-result notfound">Entrys not found.</h2>
